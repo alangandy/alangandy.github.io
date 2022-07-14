@@ -1,7 +1,7 @@
 # Terms of Use and Data Privacy Policy
-DocuSyn.com is a [Docassemble](https://docassemble.org/) hosting company.
+DocuSyn.com is a [Docassemble](https://docassemble.org/) hosting company. The DocuSyn hosting company is not responsible for the operations of the platform, its content or generated documents.
 
-The website ("docusyn.com", including any sub-domains) is provided as a paid service for organizations, (known as "subscriber",) to host their own managed Docassemble instances. By using the service, you accept and agree to the terms of use and privacy policy set forth below.
+The website ("docusyn.com", including any sub-domains) is provided as a paid service for organizations, (known as "the subscriber",) to host their own managed Docassemble instances. By using the service, you accept and agree to the terms of use and privacy policy set forth below. Please consult your specific organization for their own policies and terms of service.
 
 ## Important disclaimers
 - Any documents generated through this website are the property of the subscriber.
