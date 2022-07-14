@@ -13,8 +13,9 @@
 
 - [How can I edit a completed document?](./faqs/completed.md)
 
-## Help Videos
+- [What are the Terms of Service and Privacy Policies?](./faqs/tos.md)
 
+## Help Videos
 - [Complete Step-by-Step Walkthrough](./vids/walkthrough.md)
 
 - [Revisit Previous Questions or Documents](./vids/revisit_vid.md)
