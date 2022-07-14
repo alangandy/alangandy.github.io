@@ -1,0 +1,11 @@
+title: lscup.documate Help
+author: Alan Gandy
+email: alan.s.gandy@lonestar.edu
+logo: https://i.ibb.co/dtxvBxy/lscup-documate-available.jpg
+description: > # this means to ignore newlines until "baseurl:"
+  This site is dedicated to support the syllabus tool. Please contact alan.s.gandy@lonestar.edu with any questions.
+
+show_excerpts: false # set to false to remove excerpts on the homepage
+show_downloads: false 
+
+theme: jekyll-theme-minimal
