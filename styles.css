@@ -1,15 +1,10 @@
 /* File: styles.css */
 
-@font-face {
-    font-family: 'Stars';
-    src: url('stars.woff2') format('woff2');
-}
-
 /* General Styles */
 body {
     background-color: #F2F2F2;
     color: #809BA6;
-    font-family: 'Stars', Arial, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +16,9 @@ header {
     background-color: #27708C;
     color: #F2F2F2;
     padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header img {
