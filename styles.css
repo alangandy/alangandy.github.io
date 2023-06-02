@@ -1,39 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martlet Solutions</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Martlet Solutions</h1>
-        <p>Empowering Businesses with Smart Document Workflow Solutions</p>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>At Martlet Solutions, we specialize in document workflow automation that streamlines data collection for reporting and management. Our innovative solutions are designed to save you time, reduce errors, and increase efficiency in your business operations.</p>
-            <a href="#contact" class="button">Contact Us for a Free Consultation</a>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Martlet Solutions is a small startup founded by a dedicated solo developer. We're passionate about helping businesses of all sizes improve their document workflows and data management processes. With our solutions, you can focus on what you do best - running your business.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Ready to transform your document workflows and data management? Get in touch with us today. We'd love to hear from you.</p>
-            <p><a href="mailto:alan.gandy@martletsolutions.com" class="button">Email Us</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2023 Martlet Solutions. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+/* File: styles.css */
+
+/* General Styles */
+body {
+    background-color: #F2F2F2;
+    color: #809BA6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #27708C;
+    color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #D98452;
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    color: #BFBDB8;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #809BA6;
+    color: #F2F2F2;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+nav a {
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    color: #D98452;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+main h2 {
+    color: #27708C;
+    font-size: 2em;
+    margin-bottom: 0.75em;
+}
+
+main p {
+    color: #809BA6;
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #27708C;
+    color: #F2F2F2;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header, nav, main, footer {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
