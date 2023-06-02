@@ -1,0 +1,85 @@
+/* File: styles.css */
+
+/* General Styles */
+body {
+    background-color: #F2F2F2;
+    color: #587E8C;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+header {
+    background-color: #27708C;
+    color: #F2F2F2;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #D98452;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #BFBDB8;
+    color: #F2F2F2;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #F2F2F2;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color: #27708C;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #27708C;
+    color: #F2F2F2;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Button Styles */
+.button {
+    background-color: #D98452;
+    color: #F2F2F2;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+.button:hover {
+    background-color: #BFBDB8;
+    color: #27708C;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px;
+    }
+
+    header, nav, main, footer {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+}
