@@ -3,40 +3,442 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martlet Solutions</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Martlet Solutions LLC | AI-Powered Education Technology</title>
+    <meta name="description" content="Martlet Solutions LLC builds innovative AI-powered solutions. Discover StudySite.ai - the intelligent learning platform.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent: #6366f1;
+            --accent-light: #818cf8;
+            --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --surface: #1e293b;
+            --border: #334155;
+            --success: #10b981;
+            --white: #ffffff;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--primary);
+            color: var(--text-secondary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.7;
+            font-size: 16px;
+        }
+        header {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .logo-wrapper {
+            width: 140px;
+            flex-shrink: 0;
+        }
+        .logo-wrapper img {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+        }
+        .company-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+        }
+        nav { display: flex; gap: 2rem; }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+        nav a:hover { color: var(--accent-light); }
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: radial-gradient(ellipse at top, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                        radial-gradient(ellipse at bottom right, rgba(168, 85, 247, 0.1) 0%, transparent 50%),
+                        var(--primary);
+        }
+        .hero-content { max-width: 800px; }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 1.5rem;
+            line-height: 1.2;
+        }
+        .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin: 0 0 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+        }
+        main { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-label {
+            display: inline-block;
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-light);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 0.5rem;
+        }
+        .section-subtitle { color: var(--text-secondary); font-size: 1.1rem; margin: 0; }
+        .featured-section { padding: 6rem 0; }
+        .featured-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .featured-badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            padding: 0.35rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .featured-content h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0 0 1rem;
+        }
+        .featured-content > p { color: var(--text-secondary); margin: 0 0 1.5rem; line-height: 1.8; }
+        .feature-list { list-style: none; padding: 0; margin: 0 0 2rem; }
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+        }
+        .feature-icon { color: var(--success); font-weight: 700; flex-shrink: 0; }
+        .primary-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+        .primary-button:hover { background: var(--accent-light); transform: translateY(-1px); }
+        .button-arrow { transition: transform 0.2s ease; }
+        .primary-button:hover .button-arrow { transform: translateX(4px); }
+        .featured-visual { display: flex; justify-content: center; align-items: center; }
+        .visual-placeholder {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 4rem;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+        }
+        .ai-icon { width: 120px; height: 120px; margin: 0 auto 1.5rem; color: var(--accent-light); }
+        .visual-label { color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
+        .about-section { padding: 6rem 0; border-top: 1px solid var(--border); }
+        .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+        .about-text p { color: var(--text-secondary); margin: 0 0 1.5rem; line-height: 1.8; }
+        .about-text p:last-child { margin-bottom: 0; }
+        .values-grid { display: grid; gap: 1.5rem; }
+        .value-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .value-icon { color: var(--accent); font-size: 1.25rem; margin-bottom: 0.75rem; }
+        .value-card h4 { color: var(--text-primary); font-size: 1.1rem; font-weight: 600; margin: 0 0 0.5rem; }
+        .value-card p { color: var(--text-muted); font-size: 0.9rem; margin: 0; line-height: 1.6; }
+        .contact-section { padding: 6rem 0; }
+        .contact-card {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 4rem;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-card h2 { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin: 0 0 1rem; }
+        .contact-card > p { color: var(--text-secondary); margin: 0 0 2rem; }
+        .contact-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--white);
+            color: var(--primary);
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .contact-button:hover { transform: translateY(-2px); box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1); }
+        footer {
+            background-color: var(--primary-light);
+            border-top: 1px solid var(--border);
+            padding: 3rem 2rem;
+        }
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .footer-brand { display: flex; align-items: center; gap: 0.75rem; color: var(--text-primary); font-weight: 500; }
+        .footer-logo-wrapper { width: 100px; flex-shrink: 0; }
+        .footer-logo-wrapper img { display: block; width: 100%; height: auto; border-radius: 6px; }
+        .footer-links { display: flex; gap: 2rem; }
+        .footer-links a { color: var(--text-secondary); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: var(--accent-light); }
+        .copyright { color: var(--text-muted); font-size: 0.85rem; margin: 0; }
+        @media (max-width: 900px) {
+            .featured-card { grid-template-columns: 1fr; gap: 2rem; }
+            .featured-visual { order: -1; }
+            .about-content { grid-template-columns: 1fr; gap: 2rem; }
+        }
+        @media (max-width: 768px) {
+            .header-inner { flex-direction: column; gap: 1rem; padding: 1rem; }
+            nav { gap: 1rem; }
+            .hero { padding: 7rem 1.5rem 3rem; }
+            .hero h1 { font-size: 2rem; }
+            .hero-subtitle { font-size: 1rem; }
+            main { padding: 0 1.5rem; }
+            .featured-card { padding: 2rem; }
+            .contact-card { padding: 2rem; }
+            .section-header h2 { font-size: 1.75rem; }
+        }
+        @media (max-width: 480px) {
+            nav { flex-wrap: wrap; justify-content: center; }
+            .visual-placeholder { padding: 2rem; }
+            .ai-icon { width: 80px; height: 80px; }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <img src="/images/logo_white_background.jpg" alt="Martlet Solutions Logo">
-            <div class="header-text">
-                <h1>Martlet Solutions</h1>
-                <p>Empowering Businesses with Smart Document Workflow Solutions</p>
+        <div class="header-inner">
+            <div class="logo-container">
+                <div class="logo-wrapper">
+                    <img src="images/logo_white_background.jpg" alt="Martlet Solutions Logo">
+                </div>
+                <span class="company-name">Martlet Solutions</span>
             </div>
+            <nav>
+                <a href="#featured">Featured Project</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
-        <nav>
-            <a href="#services">Services</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
     </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Building the Future of <span class="gradient-text">AI-Powered Learning</span></h1>
+            <p class="hero-subtitle">Martlet Solutions LLC creates innovative technology solutions that transform how people learn and work.</p>
+            <a href="#featured" class="cta-button">Explore Our Work</a>
+        </div>
+    </section>
+
     <main>
-        <section id="services">
-            <h2>Services</h2>
-            <p>Streamline your data collection and reporting with our document workflow automation solutions.</p>
+        <section id="featured" class="featured-section">
+            <div class="section-header">
+                <span class="section-label">Featured Project</span>
+                <h2>StudySite.ai</h2>
+                <p class="section-subtitle">Our flagship AI-powered learning platform</p>
+            </div>
+            
+            <div class="featured-card">
+                <div class="featured-content">
+                    <div class="featured-badge">Live Product</div>
+                    <h3>Intelligent Learning, Personalized for You</h3>
+                    <p>StudySite.ai leverages cutting-edge artificial intelligence to create personalized learning experiences. Our platform adapts to each learner's pace, style, and goals to maximize understanding and retention.</p>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-icon">&#10003;</span>
+                            <span>AI-powered personalized learning paths</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Interactive coding exercises with instant feedback</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Intelligent tutoring assistant (Sherpa)</span>
+                        </li>
+                        <li>
+                            <span class="feature-icon">&#10003;</span>
+                            <span>Progress tracking and adaptive assessments</span>
+                        </li>
+                    </ul>
+                    <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
+                        Visit StudySite.ai
+                        <span class="button-arrow">&rarr;</span>
+                    </a>
+                </div>
+                <div class="featured-visual">
+                    <div class="visual-placeholder">
+                        <div class="ai-icon">
+                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+                                <circle cx="50" cy="50" r="15" fill="currentColor" opacity="0.8"/>
+                                <circle cx="50" cy="20" r="5" fill="currentColor"/>
+                                <circle cx="50" cy="80" r="5" fill="currentColor"/>
+                                <circle cx="20" cy="50" r="5" fill="currentColor"/>
+                                <circle cx="80" cy="50" r="5" fill="currentColor"/>
+                                <line x1="50" y1="35" x2="50" y2="25" stroke="currentColor" stroke-width="2"/>
+                                <line x1="50" y1="65" x2="50" y2="75" stroke="currentColor" stroke-width="2"/>
+                                <line x1="35" y1="50" x2="25" y2="50" stroke="currentColor" stroke-width="2"/>
+                                <line x1="65" y1="50" x2="75" y2="50" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <span class="visual-label">AI-Powered Learning</span>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="about">
-            <h2>About</h2>
-            <p>We're a small startup with a big passion for helping businesses improve their operations.</p>
+
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <span class="section-label">About Us</span>
+                <h2>Martlet Solutions LLC</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>We're a technology company focused on building AI-powered solutions that make a real difference. Our team combines deep expertise in artificial intelligence, software engineering, and user experience to create products that are both powerful and intuitive.</p>
+                    <p>Our mission is to democratize access to intelligent technology, starting with education. We believe that AI can transform how people learn, making quality education more accessible, engaging, and effective for everyone.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">&#9670;</div>
+                        <h4>Innovation</h4>
+                        <p>Pushing boundaries with cutting-edge AI technology</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">&#9670;</div>
+                        <h4>Quality</h4>
+                        <p>Building robust, reliable solutions that users can trust</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">&#9670;</div>
+                        <h4>Impact</h4>
+                        <p>Creating technology that makes a meaningful difference</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Ready to transform your workflows? <a href="mailto:alan.gandy@martletsolutions.com">Email us</a>.</p>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-card">
+                <h2>Let's Connect</h2>
+                <p>Interested in learning more about our work or exploring collaboration opportunities?</p>
+                <a href="mailto:alan.gandy@martletsolutions.com" class="contact-button">
+                    Get in Touch
+                    <span class="button-arrow">&rarr;</span>
+                </a>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; 2023 Martlet Solutions. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo-wrapper">
+                    <img src="images/logo_white_background.jpg" alt="Martlet Solutions Logo">
+                </div>
+                <span>Martlet Solutions LLC</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer">StudySite.ai</a>
+                <a href="mailto:alan.gandy@martletsolutions.com">Contact</a>
+            </div>
+            <p class="copyright">&copy; 2025 Martlet Solutions LLC. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
