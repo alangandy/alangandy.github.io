@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martlet Solutions LLC | AI-Powered Education Technology</title>
-    <meta name="description" content="Martlet Solutions LLC builds innovative AI-powered solutions. Discover StudySite.ai - the intelligent learning platform.">
+    <meta name="description" content="Martlet Solutions LLC builds AI-powered software for education. Creators of CodeTeach.ai — AI-generated GitHub Classroom assignments — and StudySite.ai.">
+    <meta property="og:title" content="Martlet Solutions LLC | AI-Powered Education Technology">
+    <meta property="og:description" content="Creators of CodeTeach.ai — AI-generated GitHub Classroom assignments in minutes — and StudySite.ai.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.martletsolutions.com">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-martlet_wing_logo_square-32x32.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/cropped-martlet_wing_logo_square-180x180.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -173,6 +179,50 @@
             letter-spacing: 0.05em;
             margin-bottom: 1rem;
         }
+        .featured-badge.new-badge {
+            background: rgba(99, 102, 241, 0.15);
+            color: var(--accent-light);
+        }
+        .products-stack { display: grid; gap: 2rem; }
+        .featured-card.lead {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(168, 85, 247, 0.05) 100%);
+            border-color: rgba(99, 102, 241, 0.4);
+        }
+        .product-shot {
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            height: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+        .wizard-steps { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0 0 1.5rem; }
+        .wizard-step {
+            background: rgba(99, 102, 241, 0.1);
+            color: var(--accent-light);
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border: 1px solid rgba(99, 102, 241, 0.25);
+        }
+        .secondary-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--text-primary);
+            padding: 0.875rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            margin-left: 0.75rem;
+            transition: border-color 0.2s ease, color 0.2s ease;
+        }
+        .secondary-button:hover { border-color: var(--accent); color: var(--accent-light); }
         .featured-content h3 {
             font-size: 1.75rem;
             font-weight: 700;
@@ -309,7 +359,7 @@
                 <span class="company-name">Martlet Solutions</span>
             </div>
             <nav>
-                <a href="#featured">Featured Project</a>
+                <a href="#products">Products</a>
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -319,65 +369,99 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Building the Future of <span class="gradient-text">AI-Powered Learning</span></h1>
-            <p class="hero-subtitle">Martlet Solutions LLC creates innovative technology solutions that transform how people learn and work.</p>
-            <a href="#featured" class="cta-button">Explore Our Work</a>
+            <p class="hero-subtitle">Martlet Solutions LLC creates AI-native tools for educators and learners — from auto-generated GitHub Classroom assignments to intelligent, adaptive study platforms.</p>
+            <a href="#products" class="cta-button">Explore Our Products</a>
         </div>
     </section>
 
     <main>
-        <section id="featured" class="featured-section">
+        <section id="products" class="featured-section">
             <div class="section-header">
-                <span class="section-label">Featured Project</span>
-                <h2>StudySite.ai</h2>
-                <p class="section-subtitle">Our flagship AI-powered learning platform</p>
+                <span class="section-label">Our Products</span>
+                <h2>AI Tools for Modern Education</h2>
+                <p class="section-subtitle">Two products. One mission: make learning and teaching dramatically better.</p>
             </div>
-            
-            <div class="featured-card">
-                <div class="featured-content">
-                    <div class="featured-badge">Live Product</div>
-                    <h3>Intelligent Learning, Personalized for You</h3>
-                    <p>StudySite.ai leverages cutting-edge artificial intelligence to create personalized learning experiences. Our platform adapts to each learner's pace, style, and goals to maximize understanding and retention.</p>
-                    <ul class="feature-list">
-                        <li>
-                            <span class="feature-icon">&#10003;</span>
-                            <span>AI-powered personalized learning paths</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">&#10003;</span>
-                            <span>Interactive coding exercises with instant feedback</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">&#10003;</span>
-                            <span>Intelligent tutoring assistant (Sherpa)</span>
-                        </li>
-                        <li>
-                            <span class="feature-icon">&#10003;</span>
-                            <span>Progress tracking and adaptive assessments</span>
-                        </li>
-                    </ul>
-                    <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
-                        Visit StudySite.ai
-                        <span class="button-arrow">&rarr;</span>
-                    </a>
-                </div>
-                <div class="featured-visual">
-                    <div class="visual-placeholder">
-                        <div class="ai-icon">
-                            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" stroke-width="2" opacity="0.3"/>
-                                <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
-                                <circle cx="50" cy="50" r="15" fill="currentColor" opacity="0.8"/>
-                                <circle cx="50" cy="20" r="5" fill="currentColor"/>
-                                <circle cx="50" cy="80" r="5" fill="currentColor"/>
-                                <circle cx="20" cy="50" r="5" fill="currentColor"/>
-                                <circle cx="80" cy="50" r="5" fill="currentColor"/>
-                                <line x1="50" y1="35" x2="50" y2="25" stroke="currentColor" stroke-width="2"/>
-                                <line x1="50" y1="65" x2="50" y2="75" stroke="currentColor" stroke-width="2"/>
-                                <line x1="35" y1="50" x2="25" y2="50" stroke="currentColor" stroke-width="2"/>
-                                <line x1="65" y1="50" x2="75" y2="50" stroke="currentColor" stroke-width="2"/>
-                            </svg>
+
+            <div class="products-stack">
+                <div class="featured-card lead">
+                    <div class="featured-content">
+                        <div class="featured-badge new-badge">New &mdash; Built for GitHub Classroom</div>
+                        <h3>CodeTeach.ai &mdash; AI-Generated Programming Assignments in Minutes</h3>
+                        <p>Instructors spend hours authoring GitHub Classroom assignments &mdash; writing starter code, solutions, tests, READMEs, and autograding workflows by hand. CodeTeach.ai compresses that into a 3-step wizard powered by your choice of AI model. Describe the assignment, review the generated code, deploy the template repo.</p>
+                        <div class="wizard-steps">
+                            <span class="wizard-step">1. Seed</span>
+                            <span class="wizard-step">2. Review</span>
+                            <span class="wizard-step">3. Deploy</span>
                         </div>
-                        <span class="visual-label">AI-Powered Learning</span>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Generates starter code, solution, tests, README, and GitHub Actions autograding workflow &mdash; all consistent and validated</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>12 languages: Python, Java, JavaScript, TypeScript, C++, C, C#, Go, Rust, Ruby, SQL, Jupyter notebooks</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Sandboxed validation in E2B before deploy &mdash; broken assignments never reach students</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Bring your own API key &mdash; OpenAI, Anthropic, Gemini, Mistral, Groq, or DeepSeek</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Atomic deploy via GitHub App &mdash; single-commit template repo in your org, ready for Classroom</span>
+                            </li>
+                        </ul>
+                        <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
+                            Try CodeTeach.ai
+                            <span class="button-arrow">&rarr;</span>
+                        </a>
+                        <a href="#contact" class="secondary-button">
+                            Request a Demo
+                        </a>
+                    </div>
+                    <div class="featured-visual">
+                        <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer" aria-label="Open CodeTeach.ai">
+                            <img src="images/codeteach-hero.png" alt="CodeTeach.ai interface showing a generated Python assignment with solution.py, tests, autograding, and one-click GitHub deploy" class="product-shot" loading="lazy" width="1440" height="900">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="featured-badge">Live Product</div>
+                        <h3>StudySite.ai &mdash; Intelligent Learning, Personalized for You</h3>
+                        <p>StudySite.ai leverages cutting-edge artificial intelligence to create personalized learning experiences. The platform adapts to each learner's pace, style, and goals to maximize understanding and retention.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>AI-powered personalized learning paths</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Interactive coding exercises with instant feedback</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Intelligent tutoring assistant (Sherpa)</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon">&#10003;</span>
+                                <span>Progress tracking and adaptive assessments</span>
+                            </li>
+                        </ul>
+                        <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
+                            Visit StudySite.ai
+                            <span class="button-arrow">&rarr;</span>
+                        </a>
+                    </div>
+                    <div class="featured-visual">
+                        <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" aria-label="Open StudySite.ai">
+                            <img src="images/studysite-hero.png" alt="StudySite.ai platform hero showing language support, cloud sandbox, GitHub Classroom integration, and 24/7 AI tutor" class="product-shot" loading="lazy" width="1440" height="900">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -434,10 +518,11 @@
                 <span>Martlet Solutions LLC</span>
             </div>
             <div class="footer-links">
+                <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer">CodeTeach.ai</a>
                 <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer">StudySite.ai</a>
                 <a href="mailto:alan.gandy@martletsolutions.com">Contact</a>
             </div>
-            <p class="copyright">&copy; 2025 Martlet Solutions LLC. All rights reserved.</p>
+            <p class="copyright">&copy; 2026 Martlet Solutions LLC. All rights reserved.</p>
         </div>
     </footer>
 </body>
