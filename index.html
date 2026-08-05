@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Martlet Solutions LLC | AI-Powered Education Technology</title>
-    <meta name="description" content="Martlet Solutions LLC builds AI-powered software for education. Creators of CodeTeach.ai — AI-generated GitHub Classroom assignments — and StudySite.ai.">
+    <meta name="description" content="Martlet Solutions LLC builds practical, instructor-controlled AI tools for education. Explore StudySite.ai, CodeTeach.ai, and StudyStride.ai.">
     <meta property="og:title" content="Martlet Solutions LLC | AI-Powered Education Technology">
-    <meta property="og:description" content="Creators of CodeTeach.ai — AI-generated GitHub Classroom assignments in minutes — and StudySite.ai.">
+    <meta property="og:description" content="Practical, instructor-controlled AI tools for creating learning experiences, GitHub assignments, and reviewable evidence of student thinking.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.martletsolutions.com">
     <link rel="icon" type="image/png" sizes="32x32" href="images/cropped-martlet_wing_logo_square-32x32.jpg">
@@ -225,6 +225,92 @@
             border: 1px solid var(--border);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
         }
+        .product-preview-link {
+            display: block;
+            width: 100%;
+            max-width: 560px;
+            color: inherit;
+            text-decoration: none;
+        }
+        .product-preview {
+            overflow: hidden;
+            color: #0f172a;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
+            border-radius: 14px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+        }
+        .preview-topbar {
+            display: flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.75rem 1rem;
+            color: #64748b;
+            background: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .preview-dot { width: 9px; height: 9px; border-radius: 50%; background: #cbd5e1; }
+        .preview-dot:nth-child(1) { background: #f87171; }
+        .preview-dot:nth-child(2) { background: #fbbf24; }
+        .preview-dot:nth-child(3) { background: #34d399; }
+        .preview-window-title { margin-left: 0.35rem; }
+        .preview-body { padding: 1.5rem; }
+        .preview-kicker {
+            margin: 0 0 0.35rem;
+            color: #4f46e5;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+        }
+        .preview-body h4 { margin: 0 0 1rem; color: #0f172a; font-size: 1.15rem; }
+        .preview-chip-grid { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .preview-chip {
+            padding: 0.45rem 0.65rem;
+            color: #334155;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .preview-callout {
+            display: grid;
+            gap: 0.2rem;
+            margin-top: 1rem;
+            padding: 0.9rem 1rem;
+            color: #334155;
+            background: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 10px;
+            font-size: 0.78rem;
+        }
+        .preview-callout strong { color: #3730a3; }
+        .preview-files { display: grid; gap: 0.55rem; }
+        .preview-file {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0.65rem 0.75rem;
+            color: #334155;
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .preview-status { color: #047857; }
+        .preview-transcript {
+            margin: 0;
+            padding: 0.85rem 1rem;
+            color: #475569;
+            background: #ffffff;
+            border-left: 3px solid #1769aa;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.82rem;
+            line-height: 1.55;
+        }
         .wizard-steps { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 0 0 1.5rem; }
         .wizard-step {
             background: rgba(99, 102, 241, 0.1);
@@ -432,7 +518,7 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Building the Future of <span class="gradient-text">AI-Powered Learning</span></h1>
-            <p class="hero-subtitle">Martlet Solutions LLC builds AI-native tools for programming education &mdash; from auto-generated GitHub Classroom assignments to browser-based coding environments for entire courses.</p>
+            <p class="hero-subtitle">Martlet Solutions LLC builds practical, instructor-controlled AI tools that help educators create learning experiences, prepare assignments, and preserve reviewable evidence of student thinking.</p>
             <a href="#products" class="cta-button">Explore Our Products</a>
         </div>
     </section>
@@ -442,15 +528,69 @@
             <div class="section-header">
                 <span class="section-label">Our Products</span>
                 <h2>AI Tools for Modern Education</h2>
-                <p class="section-subtitle">Two products. One mission: make learning and teaching dramatically better.</p>
+                <p class="section-subtitle">Three products. One mission: make AI useful, reviewable, and responsible in education.</p>
             </div>
 
             <div class="products-stack">
                 <div class="featured-card lead">
                     <div class="featured-content">
-                        <div class="featured-badge new-badge">New &mdash; Built for GitHub Classroom</div>
-                        <h3>CodeTeach.ai &mdash; AI-Generated Programming Assignments in Minutes</h3>
-                        <p>Instructors spend hours authoring GitHub Classroom assignments &mdash; writing starter code, solutions, tests, READMEs, and autograding workflows by hand. CodeTeach.ai compresses that into a 3-step wizard powered by your choice of AI model. Describe the assignment, review the generated code, deploy the template repo.</p>
+                        <div class="featured-badge new-badge">Upcoming release preview</div>
+                        <h3>StudySite.ai &mdash; Source-Grounded Learning for Higher Education</h3>
+                        <p>StudySite.ai helps instructors turn trusted course sources into reviewable learning experiences, then gives learners a connected workspace for study, practice, tutoring, and programming when the subject calls for it. An upcoming release expands the artifact library and introduces a new AI Experience Builder.</p>
+                        <ul class="feature-list">
+                            <li>
+                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                                <span>Source-grounded lessons, study guides, flashcards, quizzes, and explanatory reports</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                                <span>Practice sets, coding activities, numeric formulas, diagram labeling, sorting, matching, and written responses</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                                <span>New audio and video overviews, slide decks, mind maps, data tables, infographics, illustrations, and interactive visuals</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                                <span>AI Experiences for soft-skills practice, oral defense, source conversations, interviews, and Socratic dialogue</span>
+                            </li>
+                            <li>
+                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
+                                <span>Instructor review, testing, approval, and version control before learner-facing work is published</span>
+                            </li>
+                        </ul>
+                        <a href="https://studysite.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
+                            Visit StudySite.ai
+                            <span class="button-arrow" aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+                    <div class="featured-visual">
+                        <a href="https://studysite.ai" target="_blank" rel="noopener noreferrer" class="product-preview-link" aria-label="Open StudySite.ai">
+                            <div class="product-preview">
+                                <div class="preview-topbar"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-window-title">StudySite.ai</span></div>
+                                <div class="preview-body">
+                                    <p class="preview-kicker">LEARNING MODULES</p>
+                                    <h4>Choose the learning artifacts that fit.</h4>
+                                    <div class="preview-chip-grid">
+                                        <span class="preview-chip">Study guide</span>
+                                        <span class="preview-chip">Practice set</span>
+                                        <span class="preview-chip">Audio overview</span>
+                                        <span class="preview-chip">Infographic</span>
+                                        <span class="preview-chip">Interactive diagram</span>
+                                        <span class="preview-chip">Assessment</span>
+                                    </div>
+                                    <div class="preview-callout"><strong>AI Experience Builder</strong><span>Soft skills · oral defense · source conversations</span></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="featured-badge">Live product &mdash; GitHub assignment builder</div>
+                        <h3>CodeTeach.ai &mdash; GitHub Assignment Templates with Autograding</h3>
+                        <p>CodeTeach.ai helps programming instructors generate, review, validate, and deploy a complete assignment package. Start with an idea, document, starter, or solution; finish with an instructor-owned private GitHub template repository and a tested GitHub Actions autograder.</p>
                         <div class="wizard-steps">
                             <span class="wizard-step">1. Seed</span>
                             <span class="wizard-step">2. Review</span>
@@ -459,75 +599,84 @@
                         <ul class="feature-list">
                             <li>
                                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Generates starter code, solution, tests, README, and GitHub Actions autograding workflow &mdash; all consistent and validated</span>
+                                <span>Generates starter code, solution, tests, instructions, README, and required support files</span>
                             </li>
                             <li>
                                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>12 languages: Python, Java, JavaScript, TypeScript, C++, C, C#, Go, Rust, Ruby, SQL, Jupyter notebooks</span>
+                                <span>Supports Python, Java, JavaScript, TypeScript, C++, C, C#, Go, Rust, Ruby, SQL, and Jupyter notebooks</span>
                             </li>
                             <li>
                                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Sandboxed validation in E2B before deploy &mdash; broken assignments never reach students</span>
+                                <span>Runs the solution, tests, and assignment package in isolated sandboxes before deployment</span>
                             </li>
                             <li>
                                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Bring your own API key &mdash; OpenAI, Anthropic, Gemini, Mistral, Groq, or DeepSeek</span>
+                                <span>Builds and verifies the GitHub Actions autograding workflow against the approved solution</span>
                             </li>
                             <li>
                                 <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Atomic deploy via GitHub App &mdash; single-commit template repo in your org, ready for Classroom</span>
+                                <span>Deploys a private template repository with an instructor-controlled solution repository or branch</span>
                             </li>
                         </ul>
                         <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
                             Try CodeTeach.ai
                             <span class="button-arrow" aria-hidden="true">&rarr;</span>
                         </a>
-                        <a href="#contact" class="secondary-button">
-                            Request a Demo
-                        </a>
+                        <a href="#contact" class="secondary-button">Request a Demo</a>
                     </div>
                     <div class="featured-visual">
-                        <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer" aria-label="Open CodeTeach.ai">
-                            <img src="images/codeteach-hero.png" alt="CodeTeach.ai interface showing a generated Python assignment with solution.py, tests, autograding, and one-click GitHub deploy" class="product-shot" loading="lazy" width="1440" height="900">
+                        <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer" class="product-preview-link" aria-label="Open CodeTeach.ai">
+                            <div class="product-preview">
+                                <div class="preview-topbar"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-window-title">CodeTeach.ai</span></div>
+                                <div class="preview-body">
+                                    <p class="preview-kicker">ASSIGNMENT PACKAGE</p>
+                                    <h4>Reviewed, validated, and ready for GitHub.</h4>
+                                    <div class="preview-files">
+                                        <div class="preview-file"><span>starter code + solution</span><span class="preview-status">Ready</span></div>
+                                        <div class="preview-file"><span>tests + instructions</span><span class="preview-status">Approved</span></div>
+                                        <div class="preview-file"><span>GitHub Actions autograder</span><span class="preview-status">Passing</span></div>
+                                    </div>
+                                    <div class="preview-callout"><strong>Private template repository</strong><span>Instructor-owned and ready for student-repository creation</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
 
                 <div class="featured-card">
                     <div class="featured-content">
-                        <div class="featured-badge">Live Product &mdash; Cloud Beta</div>
-                        <h3>StudySite.ai &mdash; The AI Platform Built for Programming Courses</h3>
-                        <p>StudySite.ai gives students a browser-based coding environment and on-demand AI help, all wired into GitHub Classroom. Instructors get AI-generated lessons and a QA workflow powered by Riley, an AI-student simulator that catches broken lessons before they ship.</p>
+                        <div class="featured-badge">Live product &mdash; Chrome extension beta</div>
+                        <h3>StudyStride.ai &mdash; Voice and Browser Evidence, Ready to Review</h3>
+                        <p>StudyStride turns a user-started browser session into a reviewable record. Learners, instructors, and professionals can speak while working through visible browser content, then review the transcript, selected evidence, AI summary, and candidate questions before anything is shared.</p>
                         <ul class="feature-list">
-                            <li>
-                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Cloud code sandbox &mdash; write and run code in the browser, no local setup</span>
-                            </li>
-                            <li>
-                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>AI-generated lessons across 12+ languages, including 3 SQL dialects</span>
-                            </li>
-                            <li>
-                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>On-demand in-app AI help for student questions</span>
-                            </li>
-                            <li>
-                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Built-in GitHub Classroom integration</span>
-                            </li>
-                            <li>
-                                <span class="feature-icon" aria-hidden="true">&#10003;</span>
-                                <span>Riley &mdash; AI-student simulator that lets instructors QA lessons before publishing</span>
-                            </li>
+                            <li><span class="feature-icon" aria-hidden="true">&#10003;</span><span>User-controlled microphone and authorized-tab capture with visible start and stop controls</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">&#10003;</span><span>Transcript, grounded AI summaries, and candidate questions kept private for review</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">&#10003;</span><span>Google Docs and Drive outputs, optional audio, and a selected-screenshot Browser Review PDF</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">&#10003;</span><span>Useful for oral assignments, source critique, code review, data interpretation, and workflow reflection</span></li>
+                            <li><span class="feature-icon" aria-hidden="true">&#10003;</span><span>AI organizes evidence; the learner reviews the record and the instructor makes the judgment</span></li>
                         </ul>
-                        <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
-                            Visit StudySite.ai
+                        <a href="https://studystride.ai" target="_blank" rel="noopener noreferrer" class="primary-button">
+                            Visit StudyStride.ai
                             <span class="button-arrow" aria-hidden="true">&rarr;</span>
                         </a>
                     </div>
                     <div class="featured-visual">
-                        <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer" aria-label="Open StudySite.ai">
-                            <img src="images/studysite-hero.png" alt="StudySite.ai platform hero showing language support, cloud sandbox, GitHub Classroom integration, and 24/7 AI tutor" class="product-shot" loading="lazy" width="1440" height="900">
+                        <a href="https://studystride.ai" target="_blank" rel="noopener noreferrer" class="product-preview-link" aria-label="Open StudyStride.ai">
+                            <div class="product-preview">
+                                <div class="preview-topbar"><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-dot"></span><span class="preview-window-title">StudyStride.ai</span></div>
+                                <div class="preview-body">
+                                    <p class="preview-kicker">SESSION REVIEW</p>
+                                    <h4>Reasoning connected to visible evidence.</h4>
+                                    <p class="preview-transcript">“This change fixes the immediate error, but I would add a boundary test before approving the review.”</p>
+                                    <div class="preview-chip-grid" style="margin-top: 1rem;">
+                                        <span class="preview-chip">Transcript</span>
+                                        <span class="preview-chip">AI summary</span>
+                                        <span class="preview-chip">Candidate questions</span>
+                                        <span class="preview-chip">Browser Review PDF</span>
+                                    </div>
+                                    <div class="preview-callout"><strong>Responsible AI</strong><span>AI prepares the record. People make the judgment.</span></div>
+                                </div>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -540,8 +689,8 @@
                 <h2>Martlet Solutions LLC</h2>
             </div>
             <div class="about-intro">
-                <p class="about-lead">Martlet Solutions LLC is an independent Texas-based software company building AI tools for programming education.</p>
-                <p>We ship two products &mdash; CodeTeach.ai and StudySite.ai &mdash; used by instructors teaching college-level programming courses. Both are built on the same stack: Next.js, sandboxed cloud code execution, and the OpenAI Agents SDK.</p>
+                <p class="about-lead">Martlet Solutions LLC is an independent Texas-based software company building practical AI tools for education.</p>
+                <p>StudySite.ai, CodeTeach.ai, and StudyStride.ai help instructors create learning materials and assignments, support meaningful learner practice, and keep AI-assisted work reviewable and human-directed.</p>
             </div>
             <div class="values-grid">
                 <div class="value-card">
@@ -553,8 +702,8 @@
                             <path d="M14 13l2 2-2 2"/>
                         </svg>
                     </div>
-                    <h4>AI-Generated Assignments</h4>
-                    <p>CodeTeach.ai produces a complete GitHub Classroom assignment &mdash; starter code, solution, tests, README, and autograding workflow &mdash; deployed atomically as a template repo in your GitHub org.</p>
+                    <h4>Source-Grounded Learning</h4>
+                    <p>StudySite.ai helps instructors build, review, approve, and publish rich learning materials and interactive experiences grounded in trusted course sources.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon" aria-hidden="true">
@@ -563,17 +712,18 @@
                             <line x1="12" y1="19" x2="20" y2="19"/>
                         </svg>
                     </div>
-                    <h4>Browser-Based Code Sandbox</h4>
-                    <p>StudySite.ai lets students write and run real code in 12+ languages &mdash; Python, Java, C++, Rust, Go, SQL, Jupyter and more &mdash; with no local setup.</p>
+                    <h4>Verified Assignment Repositories</h4>
+                    <p>CodeTeach.ai generates complete programming assignments, validates the package, and deploys instructor-owned GitHub template repositories with autograding.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon" aria-hidden="true">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            <rect x="3" y="4" width="18" height="13" rx="2"/>
+                            <path d="M8 21h8M12 17v4M8 9h2l2-2v7l2-2h2"/>
                         </svg>
                     </div>
-                    <h4>GitHub App Integration</h4>
-                    <p>Both products plug into instructors' existing GitHub Classroom organizations. Student code lives in Git; assignments deploy as template repositories.</p>
+                    <h4>Reviewable Evidence</h4>
+                    <p>StudyStride.ai connects spoken reasoning to visible browser evidence, giving learners and instructors a record they can inspect before making decisions.</p>
                 </div>
             </div>
         </section>
@@ -606,8 +756,9 @@
                 <span>Martlet Solutions LLC</span>
             </div>
             <div class="footer-links">
+                <a href="https://studysite.ai" target="_blank" rel="noopener noreferrer">StudySite.ai</a>
                 <a href="https://codeteach.ai" target="_blank" rel="noopener noreferrer">CodeTeach.ai</a>
-                <a href="https://StudySite.ai" target="_blank" rel="noopener noreferrer">StudySite.ai</a>
+                <a href="https://studystride.ai" target="_blank" rel="noopener noreferrer">StudyStride.ai</a>
                 <a href="mailto:alan.gandy@martletsolutions.com">Contact</a>
                 <a href="tel:+19364008710">936-400-8710</a>
             </div>
